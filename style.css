@@ -7,13 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     background: linear-gradient(135deg, #8b55e9 0%, #5d6be6 100%);
 }
 .wrapper{
+    position: absolute;
+    visibility: hidden;
     width: 300px;
     background: white;
     border-radius: 10px;
@@ -46,4 +45,25 @@ body{
     margin-top: 1px;
     padding: 5px 12px;
     border-top: 1px solid #ccc;
+}
+.content .saveAs{
+    position: relative;
+    justify-content: space-between;
+}
+.saveAs .saveMenu{
+    position: absolute;
+    background: white;
+    top: -45px;
+    width: 200px;
+    right: -200px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+/*menu for when you hover over the items in save as*/
+.saveAs:hover .saveMenu{
+    opacity: 1;
+    pointer-events: auto;
 }
